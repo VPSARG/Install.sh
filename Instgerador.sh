@@ -30,7 +30,7 @@ veryfy_fun () {
 [[ ! -d ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
 unset ARQ
 case $1 in
-"gerar.sh")ARQ="/usr/bin/";;
+"generar.sh")ARQ="/usr/bin/";;
 "http-server.py")ARQ="/bin/";;
 *)ARQ="${SCPT_DIR}/";;
 esac
@@ -73,8 +73,8 @@ IVAR2="/etc/key-gerador"
 echo "$Key" > $IVAR2
 rm $HOME/lista-arq
 echo -e "\033[1;36m---------------------------------------------------------------\033[0m"
-echo "/usr/bin/gerar.sh" > /usr/bin/gerar && chmod +x /usr/bin/gerar
-echo -e "\033[1;33m Perfecto, Use el Comando \033[1;31mgerar.sh o gerar \033[1;33mpara Administrar Sus Keys y
+echo "/usr/bin/generar.sh" > /usr/bin/generar && chmod +x /usr/bin/generar
+echo -e "\033[1;33m Perfecto, Use el Comando \033[1;31mgenerar.sh o generar \033[1;33mpara Administrar Sus Keys y
  Actualizar Base del a servidor"
 echo -e "\033[1;36m---------------------------------------------------------------\033[0m"
 } || {
