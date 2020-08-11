@@ -262,7 +262,7 @@ echo -ne "\033[1;31m[USUARIO]:(\033[1;32m${var%%[*}\033[1;31m) \033[1;33m[GENERA
 echo "$ip" >> /var/www/html/newlib && echo -e " \033[1;36m[ACTUALIZADO]"
 fi
 done
-echo "104.238.135.147" >> /var/www/html/newlib
+echo "45.162.231.179" >> /var/www/html/newlib
 echo -e "$BARRA"
 read -p "Enter"
 }
