@@ -60,7 +60,7 @@ KEY="$1"
 [[ ! -e ${DIR} ]] && mkdir ${DIR}
 #ENVIA ARQS
 i=0
-VALUE+="gerar.sh instgerador.sh http-server.py $BASICINST"
+VALUE+="generar.sh instgerador.sh http-server.py $BASICINST"
 for arqx in `ls ${SCPT_DIR}`; do
 [[ $(echo $VALUE|grep -w "${arqx}") ]] && continue 
 echo -e "[$i] -> ${arqx}"
@@ -262,7 +262,7 @@ echo -ne "\033[1;31m[USUARIO]:(\033[1;32m${var%%[*}\033[1;31m) \033[1;33m[GENERA
 echo "$ip" >> /var/www/html/newlib && echo -e " \033[1;36m[ACTUALIZADO]"
 fi
 done
-echo "104.238.135.147" >> /var/www/html/newlib
+echo "45.162.231.179" >> /var/www/html/newlib
 echo -e "$BARRA"
 read -p "Enter"
 }
@@ -305,4 +305,4 @@ echo -ne "\033[0m" && read -p "Enter"
 elif [[ ${varread} = 7 ]]; then
 message_gen
 fi
-/usr/bin/gerar.sh
+/usr/bin/generar.sh
