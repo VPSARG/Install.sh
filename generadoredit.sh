@@ -125,7 +125,7 @@ generar_key () {
 valuekey="$(date | md5sum | head -c10)"
 valuekey+="$(echo $(($RANDOM*10))|head -c 5)"
 fun_list "$valuekey"
-keyfinal=$(ofus "$IP:8888/$valuekey/$LIST")
+keyfinal=$(ofus "$IP:8448/$valuekey/$LIST")
 echo -e "KEY: $keyfinal\nGenerada!"
 echo -e "$BARRA"
 read -p "Enter para Finalizar"
