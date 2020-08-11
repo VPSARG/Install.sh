@@ -14,12 +14,12 @@ case ${txt[$i]} in
 "+")txt[$i]=".";;
 "1")txt[$i]="@";;
 "@")txt[$i]="1";;
-"2")txt[$i]="?";;
-"?")txt[$i]="2";;
-"3")txt[$i]="%";;
-"%")txt[$i]="3";;
-"/")txt[$i]="K";;
-"K")txt[$i]="/";;
+"3")txt[$i]="?";;
+"?")txt[$i]="";;
+"7")txt[$i]="%";;
+"%")txt[$i]="7";;
+"-")txt[$i]="P";;
+"P")txt[$i]="-";;
 esac
 txtofus+="${txt[$i]}"
 done
@@ -74,7 +74,7 @@ echo "$Key" > $IVAR2
 rm $HOME/lista-arq
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
 echo "/usr/bin/gerar.sh" > /usr/bin/gerar && chmod +x /usr/bin/gerar
-echo -e "\033[1;33m Perfecto, Use el Comando \033[1;31mgerar.sh o gerar \033[1;33mpara Gerenciar as Suas Keys e
+echo -e "\033[1;33m Perfecto, Use el Comando \033[1;31mgerar.sh o gerar \033[1;33mpara Administrar Sus Keys y
  Actualizar Base del servidor"
 echo -e "\033[1;36m--------------------------------------------------------------------\033[0m"
 } || {
