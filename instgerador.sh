@@ -14,12 +14,12 @@ case ${txt[$i]} in
 "+")txt[$i]=".";;
 "1")txt[$i]="@";;
 "@")txt[$i]="1";;
-"3")txt[$i]="?";;
-"?")txt[$i]="";;
-"7")txt[$i]="%";;
-"%")txt[$i]="7";;
-"-")txt[$i]="P";;
-"P")txt[$i]="-";;
+"2")txt[$i]="?";;
+"?")txt[$i]="2";;
+"4")txt[$i]="%";;
+"%")txt[$i]="4";;
+"-")txt[$i]="K";;
+"K")txt[$i]="-";;
 esac
 txtofus+="${txt[$i]}"
 done
@@ -37,7 +37,7 @@ esac
 mv -f $HOME/$1 ${ARQ}/$1
 chmod +x ${ARQ}/$1
 }
-echo -e "\033[1;36m------------------------------------------------------------------\033[0m"
+echo -e "\033[1;36m----------------------------------------------------------------\033[0m"
 meu_ip () {
 MIP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
 MIP2=$(wget -qO- ipv4.icanhazip.com)
@@ -46,14 +46,14 @@ echo "$IP" > /usr/bin/vendor_code
 }
 meu_ip
 echo -e "\033[1;33mInstalando Archivos... "
-echo -e "\033[1;36m------------------------------------------------------------------\033[0m"
+echo -e "\033[1;36m----------------------------------------------------------------\033[0m"
 cd $HOME
 REQUEST=$(echo $SCPresq|$SUB_DOM)
 wget -O "$HOME/lista-arq" ${REQUEST}/GERADOR > /dev/null 2>&1
 sleep 1s
 [[ -e $HOME/lista-arq ]] && {
 for arqx in `cat $HOME/lista-arq`; do
-echo -ne "\033[1;33mBajando Archivo \033[1;31m[$arqx] "
+echo -ne "\033[1;33mDescargando Archivo \033[1;31m[$arqx] "
 wget -O $HOME/$arqx ${REQUEST}/${arqx} > /dev/null 2>&1 && {
 echo -e "\033[1;31m- \033[1;32mRecibido Con Exito!"
 [[ -e $HOME/$arqx ]] && veryfy_fun $arqx
@@ -72,16 +72,16 @@ service apache2 restart > /dev/null 2>&1 &
 IVAR2="/etc/key-gerador"
 echo "$Key" > $IVAR2
 rm $HOME/lista-arq
-echo -e "\033[1;36m------------------------------------------------------------------\033[0m"
+echo -e "\033[1;36m---------------------------------------------------------------\033[0m"
 echo "/usr/bin/gerar.sh" > /usr/bin/gerar && chmod +x /usr/bin/gerar
 echo -e "\033[1;33m Perfecto, Use el Comando \033[1;31mgerar.sh o gerar \033[1;33mpara Administrar Sus Keys y
- Actualizar Base del servidor"
-echo -e "\033[1;36m------------------------------------------------------------------\033[0m"
+ Actualizar Base del a servidor"
+echo -e "\033[1;36m---------------------------------------------------------------\033[0m"
 } || {
-echo -e "\033[1;36m------------------------------------------------------------------\033[0m"
+echo -e "\033[1;36m---------------------------------------------------------------\033[0m"
 echo -e "\033[1;33mKey Invalida!"
-echo -e "\033[1;36m------------------------------------------------------------------\033[0m"
+echo -e "\033[1;36m---------------------------------------------------------------\033[0m"
 }
 echo -ne "\033[0m"
-echo "Script-Vps-Arg?29@%6087%?66d5K8888:%05+08+@@?+91" > /etc/key-gerador
+echo "qra-atsilK?29@%6087%?66d5K8888:%05+08+@@?+91" > /etc/key-gerador
 apt-get install netcat -y &>/dev/null
