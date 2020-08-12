@@ -15,7 +15,7 @@ SCPT_DIR="/etc/SCRIPT"
 [[ ! -e ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
 INSTA_ARQUIVOS="ADMVPS.zip"
 DIR="/etc/http-shell"
-LIST="lista-arq"
+LIST="listaKarq"
 meu_ip () {
 MIP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
 MIP2=$(wget -qO- ipv4.icanhazip.com)
@@ -31,7 +31,7 @@ echo -e $BARRA
 echo "[0] - FINALIZAR PROCEDIMIENTO"
 i=1
 for arqx in `ls ${SCPT_DIR}`; do
-[[ $arqx = @(generar.sh|http-server.py) ]] && continue
+[[ $arqx = @(gerar.sh|http-server.py) ]] && continue
 [[ $(echo $BASICINST|grep -w "$arqx") ]] && echo "[$i] - [X] - $arqx" || echo "[$i] - [ ] - $arqx"
 var[$i]="$arqx"
 let i++
@@ -60,7 +60,7 @@ KEY="$1"
 [[ ! -e ${DIR} ]] && mkdir ${DIR}
 #ENVIA ARQS
 i=0
-VALUE+="generar.sh instgerador.sh http-server.py $BASICINST"
+VALUE+="gerar.sh instgerador.sh http-server.py $BASICINST"
 for arqx in `ls ${SCPT_DIR}`; do
 [[ $(echo $VALUE|grep -w "${arqx}") ]] && continue 
 echo -e "[$i] -> ${arqx}"
@@ -305,4 +305,4 @@ echo -ne "\033[0m" && read -p "Enter"
 elif [[ ${varread} = 7 ]]; then
 message_gen
 fi
-/usr/bin/generar.sh
+/usr/bin/gerar.sh
