@@ -15,7 +15,7 @@ SCPT_DIR="/etc/SCRIPT"
 [[ ! -e ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
 INSTA_ARQUIVOS="ADMVPS.zip"
 DIR="/etc/http-shell"
-LIST="listaKarq"
+LIST="rgA-spV-tpircS"
 meu_ip () {
 MIP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
 MIP2=$(wget -qO- ipv4.icanhazip.com)
@@ -60,7 +60,7 @@ KEY="$1"
 [[ ! -e ${DIR} ]] && mkdir ${DIR}
 #ENVIA ARQS
 i=0
-VALUE+="gerar.sh instgerador.sh http-server.py $BASICINST"
+VALUE+="gerar.sh Instgerador.sh http-server.py $BASICINST"
 for arqx in `ls ${SCPT_DIR}`; do
 [[ $(echo $VALUE|grep -w "${arqx}") ]] && continue 
 echo -e "[$i] -> ${arqx}"
@@ -262,7 +262,7 @@ echo -ne "\033[1;31m[USUARIO]:(\033[1;32m${var%%[*}\033[1;31m) \033[1;33m[GENERA
 echo "$ip" >> /var/www/html/newlib && echo -e " \033[1;36m[ACTUALIZADO]"
 fi
 done
-echo "104.238.135.147" >> /var/www/html/newlib
+echo "191.232.49.226" >> /var/www/html/newlib
 echo -e "$BARRA"
 read -p "Enter"
 }
