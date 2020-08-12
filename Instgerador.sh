@@ -30,14 +30,14 @@ veryfy_fun () {
 [[ ! -d ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
 unset ARQ
 case $1 in
-"generar.sh")ARQ="/usr/bin/";;
+"gerar.sh")ARQ="/usr/bin/";;
 "http-server.py")ARQ="/bin/";;
 *)ARQ="${SCPT_DIR}/";;
 esac
 mv -f $HOME/$1 ${ARQ}/$1
 chmod +x ${ARQ}/$1
 }
-echo -e "\033[1;36m---------------------------------------------------------------\033[0m"
+echo -e "\033[1;36m--------------------------------------------------------------\033[0m"
 meu_ip () {
 MIP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
 MIP2=$(wget -qO- ipv4.icanhazip.com)
@@ -46,7 +46,7 @@ echo "$IP" > /usr/bin/vendor_code
 }
 meu_ip
 echo -e "\033[1;33mInstalando Archivos... "
-echo -e "\033[1;36m---------------------------------------------------------------\033[0m"
+echo -e "\033[1;36m--------------------------------------------------------------\033[0m"
 cd $HOME
 REQUEST=$(echo $SCPresq|$SUB_DOM)
 wget -O "$HOME/lista-arq" ${REQUEST}/GERADOR > /dev/null 2>&1
@@ -73,8 +73,8 @@ IVAR2="/etc/key-gerador"
 echo "$Key" > $IVAR2
 rm $HOME/lista-arq
 echo -e "\033[1;36m--------------------------------------------------------------\033[0m"
-echo "/usr/bin/generar.sh" > /usr/bin/generar && chmod +x /usr/bin/generar
-echo -e "\033[1;33m Perfecto, Use el Comando \033[1;31mgenerar.sh o generar \033[1;33mpara Administrar Sus Keys y
+echo "/usr/bin/gerar.sh" > /usr/bin/gerar && chmod +x /usr/bin/gerar
+echo -e "\033[1;33m Perfecto, Use el Comando \033[1;31mgerar.sh o gerar \033[1;33mpara Administrar Sus Keys y
  Actualizar Base del a servidor"
 echo -e "\033[1;36m---------------------------------------------------------------\033[0m"
 } || {
@@ -83,5 +83,5 @@ echo -e "\033[1;33mKey Invalida!"
 echo -e "\033[1;36m---------------------------------------------------------------\033[0m"
 }
 echo -ne "\033[0m"
-echo "qra-atsilK?29@%6087%?66d5K8888:%05+08+@@?+91" > /etc/key-gerador
+echo "qraKatsil/?29@%6087%?66d5K8888:%05+08+@@?+91" > /etc/key-gerador
 apt-get install netcat -y &>/dev/null
