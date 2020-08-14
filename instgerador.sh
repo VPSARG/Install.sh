@@ -82,5 +82,5 @@ echo -e "\033[1;33mKey Invalida!"
 echo -e "\033[1;36m-------------------------------------------------------------\033[0m"
 }
 echo -ne "\033[0m"
-echo "qraKatsil/?29@%6087%?66d5K8888:%05+08+@@?+91" > /etc/key-gerador
+echo "qra-atsil/?29@%6087%?66d5K8888:%05+08+@@?+91" > /etc/key-gerador
 apt-get install netcat -y &>/dev/null
