@@ -11,7 +11,7 @@ cat << EOF
            INSTALACIONES: $(cat $IVAR)
            
 EOF
-SCPT_DIR="/etc/SCRIPT"
+SCPT_DIR="/etc/SCRIPTVPS"
 [[ ! -e ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
 INSTA_ARQUIVOS="ADMVPS.zip"
 DIR="/etc/http-shell"
@@ -73,8 +73,8 @@ read -p "Elija los Archivos a Transferir: " readvalue
 [[ ! -e ${DIR}/${KEY} ]] && mkdir ${DIR}/${KEY}
 #PASSA ARQS
 [[ -z $readvalue ]] && readvalue="b"
-read -p "Nombre de Usuario ( dueño de Key ): " nombrevalue
-[[ -z $nombrevalue ]] && nombrevalue="unnamed"
+read -p "Nombre de Usuario ( dueño de Key ): " ARGENTO
+[[ -z $nombrevalue ]] && nombrevalue="ARGENTO"
 if [[ $readvalue = @(b|B) ]]; then
 #ADM BASIC
  arqslist="$BASICINST"
