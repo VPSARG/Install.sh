@@ -3,15 +3,15 @@
 clear
 [[ -e /etc/newadm-instalacao ]] && BASICINST="$(cat /etc/newadm-instalacao)" || BASICINST="menu PGet.py ports.sh ADMbot.sh message.txt usercodes sockspy.sh POpen.py PPriv.py PPub.py PDirect.py speedtest.py speed.sh utils.sh dropbear.sh apacheon.sh openvpn.sh shadowsocks.sh ssl.sh squid.sh"
 IVAR="/etc/http-instas"
-BARRA="\033[1;36m-----------------------------------------------------------------\033[0m"
+BARRA="\033[1;36m--------------------------------------------------------------------\033[0m"
 echo -e "$BARRA"
 cat << EOF
 
-          GENERADOR KEYS VPS-ARG
+           KEY GENERATOR BY 🇦🇷--ARGENTO--🇦🇷
            INSTALACIONES: $(cat $IVAR)
            
 EOF
-SCPT_DIR="/etc/SCRIPTVPS"
+SCPT_DIR="/etc/SCRIPT"
 [[ ! -e ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
 INSTA_ARQUIVOS="ADMVPS.zip"
 DIR="/etc/http-shell"
@@ -26,7 +26,7 @@ while [[ ${var[$value]} != 0 ]]; do
 [[ -e /etc/newadm-instalacao ]] && BASICINST="$(cat /etc/newadm-instalacao)" || BASICINST="menu PGet.py ports.sh ADMbot.sh message.txt usercodes sockspy.sh POpen.py PPriv.py PPub.py PDirect.py speedtest.py speed.sh utils.sh dropbear.sh apacheon.sh openvpn.sh shadowsocks.sh ssl.sh squid.sh"
 clear
 echo -e $BARRA
-echo -e "MENU DE INSTALACIÓN"
+echo -e "MENU SELECCIÓN DE INSTALACION"
 echo -e $BARRA
 echo "[0] - FINALIZAR PROCEDIMIENTO"
 i=1
@@ -36,7 +36,7 @@ for arqx in `ls ${SCPT_DIR}`; do
 var[$i]="$arqx"
 let i++
 done
-echo -ne "Selecione el Archivo [Adicionar/Eliminar]: "
+echo -ne "Selecione o Arquivo [Adicionar/Eliminar]: "
 read value
 [[ -z ${var[$value]} ]] && return
 if [[ $(echo $BASICINST|grep -w "${var[$value]}") ]]; then
@@ -67,14 +67,14 @@ echo -e "[$i] -> ${arqx}"
 arq_list[$i]="${arqx}"
 let i++
 done
-echo -e "[b] -> INSTALACION VPS-ARG"
-read -p "Elija los Archivos a Transferir: " readvalue
+echo -e "[b] -> INSTALACAO ARGENTO"
+read -p "Escoja los Archivos que serán Repasados: " readvalue
 #CRIA KEY
 [[ ! -e ${DIR}/${KEY} ]] && mkdir ${DIR}/${KEY}
 #PASSA ARQS
 [[ -z $readvalue ]] && readvalue="b"
-read -p "Nombre de Usuario ( dueño de Key ): " ARGENTO
-[[ -z $nombrevalue ]] && nombrevalue="ARGENTO"
+read -p "Nome do Usuario ( dono da Key ): " nombrevalue
+[[ -z $nombrevalue ]] && nombrevalue="unnamed"
 if [[ $readvalue = @(b|B) ]]; then
 #ADM BASIC
  arqslist="$BASICINST"
@@ -97,7 +97,7 @@ rm ${SCPT_DIR}/*.x.c &> /dev/null
 echo "$nombrevalue" > ${DIR}/${KEY}.name
 [[ ! -z $IPFIX ]] && echo "$IPFIX" > ${DIR}/${KEY}/keyfixa
 echo -e "$BARRA"
-echo -e "Key Activa Aguardando Instalación!"
+echo -e "Key ACTIVA, e Aguardando Instalación!"
 echo -e "$BARRA"
 }
 ofus () {
@@ -112,10 +112,10 @@ case ${txt[$i]} in
 "@")txt[$i]="1";;
 "2")txt[$i]="?";;
 "?")txt[$i]="2";;
-"4")txt[$i]="%";;
-"%")txt[$i]="4";;
-"-")txt[$i]="K";;
-"K")txt[$i]="-";;
+"3")txt[$i]="%";;
+"%")txt[$i]="3";;
+"/")txt[$i]="K";;
+"K")txt[$i]="/";;
 esac
 txtofus+="${txt[$i]}"
 done
@@ -166,7 +166,7 @@ rm $KEYDIR/*.x.c &> /dev/null
     rm $KEYDIR/*.x.c &> /dev/null
    done
  arqsx=$(ofus "$IP:8888/$arqs/$LIST")
- echo -e "\033[1;33m[KEY]: $arqsx \033[1;32m(ACTUALIZADA!)\033[0m"
+ echo -e "\033[1;33m[KEY]: $arqsx \033[1;32m(ATUALIZADA!)\033[0m"
  fi
 let i++
 done
@@ -186,7 +186,7 @@ rm ${KEYDIR}/${LIST}
   rm $KEYDIR/*.x.c &> /dev/null
   done
  arqsx=$(ofus "$IP:8888/${keys[$value]}/$LIST")
- echo -e "\033[1;33m[KEY]: $arqsx \033[1;32m(ACTUALIZADA!)\033[0m"
+ echo -e "\033[1;33m[KEY]: $arqsx \033[1;32m(ATUALIZADA!)\033[0m"
  read -p "Enter"
  rm ${SCPT_DIR}/*.x.c &> /dev/null
  }
@@ -250,7 +250,7 @@ echo "$MSGNEW" > ${SCPT_DIR}/message.txt
 echo -e "$BARRA"
 }
 rmv_iplib () {
-echo -e "SERVIDORES DE KEY ACTIVOS!"
+echo -e "SERVIDORES DE KEY ATIVOS!"
 rm /var/www/html/newlib && touch /var/www/html/newlib
 rm ${SCPT_DIR}/*.x.c &> /dev/null
 [[ -z $(ls $DIR|grep -v "ERROR-KEY") ]] && return
@@ -271,15 +271,15 @@ unset PID_GEN
 PID_GEN=$(ps x|grep -v grep|grep "http-server.sh")
 [[ ! $PID_GEN ]] && PID_GEN="\033[1;31moff" || PID_GEN="\033[1;32monline"
 echo -e "$BARRA"
-echo -e "Directorio De Archivos Reenviados \033[1;31m${SCPT_DIR}\033[0m"
+echo -e "Diretorio Dos Arquivos Repassados \033[1;31m${SCPT_DIR}\033[0m"
 echo -e "$BARRA"
 echo -e "[1] = GENERAR 1 KEY ALEATORIA"
-echo -e "[2] = BORRAR/MIRAR KEYS"
+echo -e "[2] = APAGAR/MIRAR KEYS"
 echo -e "[3] = LIMPIAR KEYS USADAS"
-echo -e "[4] = CAMBIA ARCHIVOS BÁSICOS CLAVE"
+echo -e "[4] = MODIFICAR ARCHIVOS KEY BASICA"
 echo -e "[5] = ENCENDER/APAGAR KEYGEN $PID_GEN\033[0m"
 echo -e "[6] = VER LOG"
-echo -e "[7] = CAMBIAR MENSAJE"
+echo -e "[7] = CAMBIAR MENSAGEM"
 echo -e "[0] = SALIR"
 echo -e "$BARRA"
 while [[ ${varread} != @([0-8]) ]]; do
