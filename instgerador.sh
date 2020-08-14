@@ -1,6 +1,6 @@
 #!/bin/bash
 IVAR="/etc/http-instas"
-SCPT_DIR="/etc/SCPT"
+SCPT_DIR="/etc/SCRIPTVPS"
 SUB_DOM='base64 -d'
 rm $(pwd)/$0
 ofus () {
