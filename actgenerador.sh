@@ -35,11 +35,11 @@ esac
 mv -f $HOME/$1 ${ARQ}/$1
 chmod +x ${ARQ}/$1
 }
-echo -e "\033[1;31m--------------------------------------------------------------------\033[0m"
-echo -e "\033[1;31m----------------\033[0m \033[1;33mKEY GENERADOR | By VPS-ARGENTO\033[0m \033[1;31m--------------\033[0m"
 echo -e "\033[1;31m----------------------------------------------------------------\033[0m"
+echo -e "\033[1;31m----------------\033[0m \033[1;33mKEY GENERADOR | By VPS-ARGENTO\033[0m \033[1;31m--------------\033[0m"
+echo -e "\033[1;31m---------------------------------------------------------------\033[0m"
 read -p "INTRODUZCA SU KEY DE ACTUALIZACIÓN: " Key
-echo -e "\033[1;31m--------------------------------------------------------------------\033[0m"
+echo -e "\033[1;31m------------------------------------------------------------------\033[0m"
 [[ ! $Key ]] && {
 echo -e "\033[1;31m----------------------------------------------------------------\033[0m"
 echo -e "\033[1;33mKey inválida!"
@@ -65,7 +65,7 @@ echo -ne "\033[1;33mDescargando archivo: \033[1;31m[$arqx] "
 wget -O $HOME/$arqx ${IP}:81/${REQUEST}/${arqx} > /dev/null 2>&1 && echo -e "\033[1;31m- \033[1;32mRecibido con éxito!" || echo -e "\033[1;31m- \033[1;31mFalla (no recibido!)"
 [[ -e $HOME/$arqx ]] && veryfy_fun $arqx
 done
-[[ ! -e /usr/bin/trans ]] && wget -O /usr/bin/trans https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0-ArchivosUtilitarios/master/trans &> /dev/null
+[[ ! -e /usr/bin/trans ]] && wget -O /usr/bin/trans https://raw.githubusercontent.com/VPSARG/VPS-ARG-2.0/master/ArchivosUtilitarios/trans &> /dev/null
 mv -f /bin/http-server.py /bin/http-server.sh && chmod +x /bin/http-server.sh
 apt-get install bc -y &>/dev/null
 apt-get install screen -y &>/dev/null
@@ -79,11 +79,11 @@ IVAR2="/etc/key-gerador"
 echo "$Key" > $IVAR2
 rm $HOME/lista-arq
 } || {
-echo -e "\033[1;31m----------------------------------------------------------------\033[0m"
+echo -e "\033[1;31m---------------------------------------------------------------\033[0m"
 echo -e "\033[1;33mKey Invalida!"
-echo -e "\033[1;31m----------------------------------------------------------------\033[0m"
+echo -e "\033[1;31m---------------------------------------------------------------\033[0m"
 }
-echo -e "\033[1;31m-----------------\033[0m \033[1;33mACTUALIZACIÓN FINALIZADA\033[0m \033[1;31m-----------------------\033[0m"
-echo -e "\033[1;31m----------------------------------------------------------------\033[0m"
+echo -e "\033[1;31m----------------\033[0m \033[1;33mACTUALIZACIÓN FINALIZADA\033[0m \033[1;31m----------------------\033[0m"
+echo -e "\033[1;31m---------------------------------------------------------------\033[0m"
 sleep 3
 exit
