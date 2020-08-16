@@ -11,11 +11,11 @@ cat << EOF
            INSTALACIONES: $(cat $IVAR)
            
 EOF
-SCPT_DIR="/etc/SCRIPT"
+SCPT_DIR="/etc/SCRIPTVPS"
 [[ ! -e ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
-INSTA_ARQUIVOS="ADMVPS.zip"
+INSTA_ARQUIVOS="ADMINVPS.zip"
 DIR="/etc/http-shell"
-LIST="lista-arq"
+LIST="listaKarq"
 meu_ip () {
 MIP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
 MIP2=$(wget -qO- ipv4.icanhazip.com)
@@ -67,7 +67,7 @@ echo -e "[$i] -> ${arqx}"
 arq_list[$i]="${arqx}"
 let i++
 done
-echo -e "[b] -> INSTALACAO ARGENTO"
+echo -e "[b] -> INSTALACION ARGENTO-VPS"
 read -p "Escoja los Archivos que serán Repasados: " readvalue
 #CRIA KEY
 [[ ! -e ${DIR}/${KEY} ]] && mkdir ${DIR}/${KEY}
