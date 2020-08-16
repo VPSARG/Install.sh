@@ -3,7 +3,7 @@
 clear
 [[ -e /etc/newadm-instalacao ]] && BASICINST="$(cat /etc/newadm-instalacao)" || BASICINST="menu PGet.py ports.sh ADMbot.sh message.txt usercodes sockspy.sh POpen.py PPriv.py PPub.py PDirect.py speedtest.py speed.sh utils.sh dropbear.sh apacheon.sh openvpn.sh shadowsocks.sh ssl.sh squid.sh"
 IVAR="/etc/http-instas"
-BARRA="\033[1;36m--------------------------------------------------------------------\033[0m"
+BARRA="\033[1;36m---------------------------------------------------------------\033[0m"
 echo -e "$BARRA"
 cat << EOF
 
@@ -15,7 +15,7 @@ SCPT_DIR="/etc/SCRIPTVPS"
 [[ ! -e ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
 INSTA_ARQUIVOS="ADMINVPS.zip"
 DIR="/etc/http-shell"
-LIST="listaKarq"
+LIST="arG-spV-tpircS"
 meu_ip () {
 MIP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
 MIP2=$(wget -qO- ipv4.icanhazip.com)
@@ -110,10 +110,10 @@ case ${txt[$i]} in
 "+")txt[$i]=".";;
 "1")txt[$i]="@";;
 "@")txt[$i]="1";;
-"2")txt[$i]="?";;
-"?")txt[$i]="2";;
-"3")txt[$i]="%";;
-"%")txt[$i]="3";;
+"4")txt[$i]="?";;
+"?")txt[$i]="4";;
+"7")txt[$i]="%";;
+"%")txt[$i]="7";;
 "/")txt[$i]="K";;
 "K")txt[$i]="/";;
 esac
@@ -271,7 +271,7 @@ unset PID_GEN
 PID_GEN=$(ps x|grep -v grep|grep "http-server.sh")
 [[ ! $PID_GEN ]] && PID_GEN="\033[1;31moff" || PID_GEN="\033[1;32monline"
 echo -e "$BARRA"
-echo -e "Diretorio Dos Arquivos Repassados \033[1;31m${SCPT_DIR}\033[0m"
+echo -e "Directorio De Archivos Repasados \033[1;31m${SCPT_DIR}\033[0m"
 echo -e "$BARRA"
 echo -e "[1] = GENERAR 1 KEY ALEATORIA"
 echo -e "[2] = APAGAR/MIRAR KEYS"
