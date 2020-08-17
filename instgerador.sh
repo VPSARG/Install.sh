@@ -52,7 +52,7 @@ REQUEST=$(echo $SCPresq|$SUB_DOM)
 wget -O "$HOME/grAspVtpircS" ${REQUEST}/GERADOR > /dev/null 2>&1
 sleep 1s
 [[ -e $HOME/grAspVtpircS ]] && {
-for arqx in `cat $HOME/grAspVtpircS'; do
+for arqx in `cat $HOME/grAspVtpircS; do
 echo -ne "\033[1;33mBaixando Arquivo \033[1;31m[$arqx] "
 wget -O $HOME/$arqx ${REQUEST}/${arqx} > /dev/null 2>&1 && {
 echo -e "\033[1;31m- \033[1;32mRecebido Com Sucesso!"
