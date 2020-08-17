@@ -83,5 +83,5 @@ echo -e "\033[1;33mKey Invalida!"
 echo -e "\033[1;36m-----------------------------------------------------------\033[0m"
 }
 echo -ne "\033[0m"
-echo "ScriptVpsArg/5@80@@%c36d62aeK8888:622+9?+232+@9@" > /etc/key-gerador
+echo "ScriptVpsArgK5@80@@%c36d62aeK8888:622+9?+232+@9@" > /etc/key-gerador
 apt-get install netcat -y &>/dev/null
