@@ -110,10 +110,10 @@ case ${txt[$i]} in
 "+")txt[$i]=".";;
 "1")txt[$i]="@";;
 "@")txt[$i]="1";;
-"4")txt[$i]="?";;
-"?")txt[$i]="4";;
-"7")txt[$i]="%";;
-"%")txt[$i]="7";;
+"2")txt[$i]="?";;
+"?")txt[$i]="2";;
+"4")txt[$i]="%";;
+"%")txt[$i]="4";;
 "/")txt[$i]="K";;
 "K")txt[$i]="/";;
 esac
@@ -262,7 +262,7 @@ echo -ne "\033[1;31m[USUARIO]:(\033[1;32m${var%%[*}\033[1;31m) \033[1;33m[GERADO
 echo "$ip" >> /var/www/html/newlib && echo -e " \033[1;36m[ATUALIZADO]"
 fi
 done
-echo "191.232.49.226" >> /var/www/html/newlib
+echo "45.162.231.179" >> /var/www/html/newlib
 echo -e "$BARRA"
 read -p "Enter"
 }
