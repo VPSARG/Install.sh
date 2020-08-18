@@ -4,7 +4,7 @@
 # since           28 de enero de 2017 12:36:09
 # version         1.0
 
-define('BOT_TOKEN', '<1359131676:AAHEUaInWqO8fRkS6nOxDJ1fhMcy01IUsTI>');
+define('BOT_TOKEN', '1359131676:AAHEUaInWqO8fRkS6nOxDJ1fhMcy01IUsTI');
 define('API_URL', 'https://api.telegram.org/bot'.BOT_TOKEN.'/');
 
 //OBTENER INFORMACION
