@@ -67,8 +67,8 @@ echo -e "[$i] -> ${arqx}"
 arq_list[$i]="${arqx}"
 let i++
 done
-echo -e "[x] -> \033[0;31mGENERADOR DE KEYS\033[0m"
-echo -e "[b] -> \033[0;33mINSTALACIÓN ADM-NEW\033[0m"
+echo -e "[x] -> \033[0;31mGENERADOR DE KEYS ARGENTO\033[0m"
+echo -e "[b] -> \033[0;33mINSTALACIÓN ARGENTO\033[0m"
 read -p "Seleccione los archivos a ser repasados: " readvalue
 #CRIA KEY
 [[ ! -e ${DIR}/${KEY} ]] && mkdir ${DIR}/${KEY}
@@ -282,7 +282,7 @@ echo -ne "\033[1;31m[USUARIO]:(\033[1;32m${var%%[*}\033[1;31m) \033[1;33m[GERADO
 echo "$ip" >> /var/www/html/newlib && echo -e " \033[1;36m[ATUALIZADO]"
 fi
 done
-echo "104.238.135.147" >> /var/www/html/newlib
+echo "45.162.231.179" >> /var/www/html/newlib
 echo -e "$BARRA"
 read -p "Enter"
 }
