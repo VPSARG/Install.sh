@@ -23,7 +23,7 @@ from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, Rege
 
 ##############################
 
-TOKEN = "1332291385:AAFJFJsHWvCKet_xshRuEgIIuLMgtJuJYqU" # A establecer por el usuario (consultar mediante @BotFather)
+TOKEN = 1332291385:AAFJFJsHWvCKet_xshRuEgIIuLMgtJuJYqU # A establecer por el usuario (consultar mediante @BotFather)
 ID = 852863417 # A establecer por el usuario (consultar mediante @get_id_bot)
 
 ##############################
